@@ -1,3 +1,149 @@
+/*
+JP and the Escape Plan
+JP is stuck in a grid of buildings of size 
+N
+×
+M
+N×M, after he is dropped from a helicopter. He will be able to escape this grid if he can reach to any building that is on the boundary of grid. He can jump from one building to the other if and only if : 
+
+The buildings shares the edges with each other, i.e are adjacent (not diagonally adjacent)
+The building to which he is jumping should be of the same height of the building on which he is standing OR the building to which he is jumping should have height at max 
+J
+J less than the one on which he is standing. 
+The top left building will have the co-ordinates 
+(
+1
+,
+1
+)
+(1,1) and the bottom right will have the co-ordinates 
+(
+N
+,
+M
+)
+(N,M)
+Input:
+The first line contains two space separated integers 
+N
+N and 
+M
+M Each of the next 
+N
+N lines contains 
+M
+M space separated integers denoting the heights of the buildings.
+Next line contains three space separated integers 
+D
+x
+Dx, 
+D
+y
+Dy and 
+J
+J
+D
+x
+Dx, 
+D
+y
+Dy are the co-ordinates of the building where JP is dropped.
+
+Output:
+On the first line, print "YES"(without quotes) if he can reach any building on the boundary of the grid else print "NO"(without quotes).
+
+If the answer is YES, on the next line print a single integer 
+K
+K, the length of the path JP must travel along to reach his destination. In each of the next 
+K
+K lines, print 
+2
+2 space separated integers 
+(
+x
+,
+y
+)
+(x,y). It is necessary that the first co-ordinate along the path must be 
+(
+D
+x
+,
+D
+y
+)
+(Dx,Dy), and the last co-ordinate along the path must be present on the boundary of the grid.
+
+A path is considered to the valid if and only if it does not contain any repeated co-ordinates, and does not violate any rules of JP's travel conditions mentioned above. In the case of printing a wrong path, you shall get a Wrong Answer. It is not necessary that the printed path should be the shortest one available.
+
+Constraints:
+
+1
+≤
+N
+,
+M
+≤
+500
+1≤N,M≤500
+1
+≤
+H
+e
+i
+g
+h
+t
+(
+i
+,
+j
+)
+≤
+10
+9
+1≤Height(i,j)≤109
+
+1
+≤
+D
+x
+≤
+N
+1≤Dx≤N
+1
+≤
+D
+y
+≤
+M
+1≤Dy≤M
+1
+≤
+j
+≤
+10
+9
+1≤j≤109
+
+Sample Input(Plaintext Link)
+1
+4 4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+3 3 5
+Sample Output(Plaintext Link)
+YES
+4
+3 3
+3 2
+2 2
+2 1
+
+
+*/
 package core;
 
 import java.util.*;
