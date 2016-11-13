@@ -40,6 +40,7 @@ class TestClass {
 
 	private static boolean findPath(int dx, int dy, int max_j, boolean[][] visited, int[][] height,
 			ArrayList<String> path) {
+		//check if we are on the edge
 		if(height[dx-1][dy] == 0 || height[dx+1][dy] == 0 ||
 				height[dx][dy-1] == 0 || height[dx][dy+1] == 0){
 			path.add(dx+" "+dy);
@@ -47,7 +48,6 @@ class TestClass {
 
 		}else{
 			// height must be same or diff can be max upto max_j and node should not have been visited before
-			
 			//check if we can move up
 			if(height[dx][dy] - height[dx-1][dy] >= 0 && 
 					height[dx][dy] - height[dx-1][dy] <= max_j && visited[dx-1][dy] == false){
